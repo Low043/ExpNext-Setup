@@ -1,16 +1,14 @@
-import express from 'express';
+import 'dotenv/config';
+import { appConfig } from './app.config.js';
+import { app } from './server.js';
 
-const PORT = 3001;
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+// Boot do sistema
+app.listen(appConfig.port, () => {
+  console.log(`Server is running on http://localhost:${appConfig.port}`);
+  console.log(`Environment: ${appConfig.nodeEnv}`);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-
+// Ctrl + C
 process.on('SIGINT', () => {
   console.log('Shutting down server...');
   process.exit();

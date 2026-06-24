@@ -1,5 +1,12 @@
 {
   "name": "test",
   "version": "0.0.1",
-  "packageManager": "pnpm@11.8.0"
+  "packageManager": "pnpm@11.8.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r --parallel build",
+    "start": "pnpm -r --parallel start",
+    "lint": "pnpm -r --parallel lint",
+    "format": "pnpm -r --parallel format"
+  }
 }
