@@ -19,6 +19,7 @@ Crie um arquivo `.env` dentro de `apps/api/` com as seguintes variáveis:
 
 ```env
 PORT=3001
+NODE_ENV=development
 
 JWT_SECRET=super-secret-key
 JWT_EXPIRES_IN=1d
@@ -112,8 +113,8 @@ Exemplo: `pnpm -F api exec prisma migrate dev`.
 
 6. Build e Start (Produção):
    ```bash
-   pnpm -F api build
-   pnpm -F api start
+   pnpm run build
+   pnpm run start
    ```
 
 ## Git Flow / Commits
